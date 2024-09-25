@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Ribs</title>
+    <link
+      href="./css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-dark bg-black fixed-top" id="menu">
+
+    </nav>
+    <hr />
+    <hr />
+    <hr />
+    <div class="container" id="card-products">
+
+    </div>
+
+
+
+      <p></p>
+      <p></p>
+    </div>
+
+    <script src="./js/printHtml.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+      let platos =[
+        {
+          img:"./img/platos/canasta_de_pollo.jpg",
+          title:"CANASTA DE POLLO",
+          description:"Piezas de pechuga de pollo empanizadas acompañadas de papas fritas, mostaza miel y ketchup",
+          price:"Precio US$ 8.00"
+        },
+        {
+          img:"./img/platos/alitas_bbq.jpg",
+          title:"ALITAS BBQ",
+          description:"300gr de alitas bañadas en salsa BBQ con una ración de papa fritas (180gr)",
+          price:"Precio US$ 8.00"
+        },
+        {
+          img:"./img/platos/alitas_asiaticas.jpg",
+          title:"Alitas asiáticas",
+          description:"Deliciosas alitas de pollo braseadas bañadas en salsa roja asiática acompañadas de papas rústicas ",
+          price:"Precio US$ 8.00"
+        },
+        {
+          img:"./img/platos/costillas_bbq.jpg",
+          title:"COSTILLA BBQ",
+          description:"Costillas de cerdo seleccionadas braseadas con salsa BBQ acompañadas de ensalada coleslaw y papas rústicas",
+          price:"Precio US$ 20.00"
+        },
+        {
+          img:"./img/platos/espetas.jpg",
+          title:"Espetas",
+          description:"Dos finas brochetas con lomitos de res y pechuga de pollo grilladas acompañadas de papas rústicas, chimichurri y guasacaca",
+          price:"Precio US$ 13.00"
+        },
+        {
+          img:"./img/platos/pork_belly.jpg",
+          title:"Pork Belly",
+          description:"Corte de cerdo con piel crujiente acompañado con guacamole, pico de gallo y papas fritas",
+          price:"Precio US$ 15.00"
+        },
+        {
+          img:"./img/platos/costiship.jpg",
+          title:"Costiship",
+          description:"Botones de costilla braseados, bañados en salsa roja asiática ",
+          price:"Precio US$ 16.00"
+        },
+        {
+          img:"./img/platos/codillo.jpg",
+          title:"Codillo ",
+          description:"Codillo de cerdo bien crujiente braseado y frito acompañado de salsa de piña asada y papa gratinada con queso manchego ",
+          price:"Precio US$ 15.00"
+        },
+        {
+          img:"./img/platos/solomo_grillado.jpg",
+          title:"Solomo grillado",
+          description:"",
+          price:"Precio US$ 15.00"
+        },
+        {
+          img:"./img/platos/pollo_grillado.jpg",
+          title:"Pollo Grillado",
+          description:"Pechuga de pollo al grill acompañado con ensalada cesar y tomates gratinados",
+          price:"Precio US$ 12.00"
+        },
+        {
+          img:"./img/platos/parrilla_ribs.jpg",
+          title:"Parrilla Ribs",
+          description:"Churrasco de solomo, pechuga de pollo, chorizo, morcilla acompañado de papas rústicas, guasacaca y chimichurri",
+          price:"Precio US$ 23.00"
+        },
+        {
+          img:"./img/platos/fajitas.jpg",
+          title:"Fajitas ",
+          description:"Tiras de pollo y carne salteados con vegetales acompañados con tortillas de trigo, guacamole, pico de gallo, queso amarillo rallado y salsa tatemada ",
+          price:"Precio US$ 13.00"
+        },
+        {
+          img:"./img/platos/tabla_fiestera.jpg",
+          title:"Tabla Fiestera",
+          description:"",
+          price:"Precio US$ 39.00"
+        },
+        /*{
+          img:"./img/platos/",
+          title:"",
+          description:"",
+          price:"Precio US$ 4.30"
+        },
+        {
+          img:"./img/platos/",
+          title:"",
+          description:"",
+          price:"Precio US$ 4.30"
+        },*/
+
+      ]
+
+    
+      printHtml(platos)
+    </script>
+    <script
+      src="./js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Ribs</title>
+    <link
+      href="./css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-dark bg-black fixed-top" id="menu">
+    </nav>
+    <hr />
+    <hr />
+    <hr />
+    <div class="container" id="card-products">
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Extras para su Hamburguesa</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="adicionales">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <p></p>
+      <p></p>
+    </div>
+    <script src="./js/printHtml.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+      let burger =[
+        {
+          img:"./img/burger/burger_de_carne.jpg",
+          title:"Burger de Carne",
+          description:"Hamburguesa de carne de res (150 gr), vegetales y salsa kevin.",
+          price:"Precio US$ 4.30",
+          adicional: true
+        },
+        {
+          img:"./img/burger/burger_de_pollo_crispy.jpg",
+          title:"Burger Pollo Crispy",
+          description:"Hamburguesa con Tenders de pollo empanizados (195 gr), vegetales y miel mostaza.",
+          price:"Precio US$ 6.40",
+          adicional: true
+        },
+        {
+          img:"./img/burger/burger_doble_carne.jpg",
+          title:"Burger Doble Carne",
+          description:"Hamburguesa con doble carne de res (260 gr), vegetales y salsa kevin.",
+          price:"Precio US$ 6.00",
+          adicional: true
+        },
+        {
+          img:"./img/burger/burger_de_costilla.jpg",
+          title:"Burger Costilla BBQ",
+          description:"Hamburguesa con carne de costilla de cerdo (140 gr), vegetales y salsa BBQ",
+          price:"Precio US$ 6.00",
+          adicional: true
+        },
+        {
+          img:"./img/burger/burger_pollo_cesar.jpg",
+          title:"Burger Pollo Cesar",
+          description:"Hamburguesa de pechuga de pollo empanizada (210 gr), tocineta, queso parmesano, lechuga chiffonade y aderezo césar.",
+          price:"Precio US$ 11.00"
+        },
+        {
+          img:"./img/burger/crunch_burger.jpg",
+          title:"The Crunch Burger",
+          description:"Pan campesino, carne de res, queso crema empanizado, vegetales criollos, cebollitas picante, queso mozzarella, y salsa mayolimón",
+          price:"Precio US$ 4.99"
+        },
+        {
+          img:"./img/burger/tnt_burger.jpg",
+          title:"TNT Burger",
+          description:"Pan campesino, carne de res, salsa de pimentón ahumado, queso crema empanizado, tocineta y tomates confitados",
+          price:"Precio US$ 6.70"
+        },
+        {
+          img:"./img/burger/burger_kevin.jpg",
+          title:"Burger Kevin",
+          description:"Pan de papa, alioli de ajo y miel, carne de res, queso cheddar y mozarella gratinado, y chistorra",
+          price:"Precio US$ 6.70"
+        },
+        {
+          img:"./img/burger/burger_street.jpg",
+          title:"Burger Street",
+          description:"Pan campesino, carne de res (130gr), pechuga de pollo a la plancha (65gr), queso guayanés, chistorra, huevo, tocineta, papas ralladas, vegetales y salsas tradicionales",
+          price:"Precio US$ 11.0"
+        },
+      ]
+      let extras =[
+        {
+          img:"./img/extras/tomates_hilmary.jpg",
+          title:"Tomates Hilmary",
+          description:"Tomates asados rellenos con puré de papas, queso crema, queso parmesano gratinado y mezclas de finas hierbas deshidratadas ",
+          price:"Precio US$ 4.00"
+        },
+        {
+          img:"./img/extras/queso_cheddar.jpg",
+          title:"Extra de queso Cheddar",
+          description:"",
+          price:"Precio US$ 1.40"
+        },
+        {
+          img:"./img/extras/tocineta.jpg",
+          title:"Extra de tocineta",
+          description:"",
+          price:"Precio US$ 1.60"
+        },
+        {
+          img:"./img/extras/pepinillos.jpg",
+          title:"Extra de pepinillos",
+          description:"",
+          price:"Precio US$ 1.00"
+        },
+        {
+          img:"./img/extras/cebolla_caramelizada.jpg",
+          title:"Extra de Cebolla caramelizada",
+          description:"",
+          price:"Precio US$ 1.00"
+        },
+        {
+          img:"./img/extras/chistorra.jpg",
+          title:"Extra de chistorra",
+          description:"",
+          price:"Precio US$ 1.00"
+        },
+        {
+          img:"./img/extras/queso_crema_empanizado.jpg",
+          title:"Queso crema empanizado",
+          description:"",
+          price:"Precio US$ 1.00"
+        },
+        {
+          img:"./img/extras/queso_guayanes.jpg",
+          title:"Extra de queso guayanes",
+          description:"",
+          price:"Precio US$ 1.50"
+        },
+        {
+          img:"./img/extras/huevo.jpg",
+          title:"Huevo",
+          description:"",
+          price:"Precio US$ 1.00"
+        },
+
+      ]
+
+      printHtml(burger)
+
+      let modalExtras = (array=[])=>{
+
+        array.forEach(e =>{
+          document.getElementById("adicionales").innerHTML+=`
+          <ul class="list-group ">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">${e.title}</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">${e.price}</span>
+            </li>
+          </ul>
+          <p></p>
+          
+
+          `
+    
+        })
+      }
+      modalExtras(extras)
+    </script>
+    
+    <script
+      src="./js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
