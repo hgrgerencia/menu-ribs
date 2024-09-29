@@ -34,12 +34,12 @@ let printHtml = (array=[])=>{
         <div class="card mb-3">
           ${insertHtml}
           <div class="card-body" style="background-color: black;">
-            <h5 class="card-title text-white">${e.title}</h5>
+            <h5 class="card-title text-white style-script-regular h1">${e.title}</h5>
             <p class="card-text text-white">
               ${e.description}
             </p>
             <p class="card-text text-white">
-              <small class="lead text-white">${e.price}</small>
+              <p class=" text-white h5">${e.price}</p>
               ${ adicional}
             </p>
           </div>

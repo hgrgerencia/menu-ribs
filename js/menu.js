@@ -1,7 +1,7 @@
 let menu = ()=>{
     document.getElementById("menu").innerHTML= `
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">Menú Ribs Burger</a>
+        <a class="navbar-brand style-script-regular container" href="./index.html">Menú  Ribs  Burger</a>
         <button
           class="navbar-toggler"
           type="button"
