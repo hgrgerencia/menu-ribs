@@ -1,16 +1,19 @@
 let menu = ()=>{
     document.getElementById("menu").innerHTML= `
       <div class="container-fluid">
-        <a class="navbar-brand style-script-regular container" href="./index.html">Menú  Ribs  Burger</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container  ">
+          <button
+            class="navbar-toggler "
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand style-script-regular  col-1" href="./index.html">Menú Ribs Burger</a>
+
+        </div>
         <div
           class="offcanvas offcanvas-end text-bg-dark"
           tabindex="-1"
