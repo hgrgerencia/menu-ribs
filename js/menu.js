@@ -57,6 +57,9 @@ let menu = ()=>{
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./licores.html">Cervezas y Licores</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./cafes.html">Cafés</a>
+              </li>
             </ul>
             
           </div>

@@ -29,21 +29,37 @@ let printHtml = (array=[])=>{
       if (e.video){
         insertHtml = video (e.video)
       }
+      let precio=''
+      if (e.lista) {
+        precio =`
+         <div class="card-text text-white"> 
+          ${e.description}
+         </div>
+
+        `
+      }else {
+        precio = `
+            <p class="card-text text-white">
+              ${e.description}
+            </p>
+            <p class="card-text text-white" >
+            <p class=" text-white h5">${e.price}</p>
+              ${ adicional}
+            </p>
+        `
+      }
       
       document.getElementById("card-products").innerHTML+=`
+      <div class="container">
         <div class="card mb-3">
           ${insertHtml}
           <div class="card-body" style="background-color: black;">
             <h5 class="card-title text-white style-script-regular h1">${e.title}</h5>
-            <p class="card-text text-white">
-              ${e.description}
-            </p>
-            <p class="card-text text-white">
-              <p class=" text-white h5">${e.price}</p>
-              ${ adicional}
-            </p>
+      
+              ${precio}
           </div>
         </div>
+      </div>
       `
 
     })
