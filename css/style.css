@@ -11,3 +11,24 @@
 .gold {
   color:gold
 }
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(226, 217, 92); /* Color del botón */
+  color: rgb(53, 53, 54); /* Color del texto */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  background-color: goldenrod; /* Color al pasar el mouse */
+}
