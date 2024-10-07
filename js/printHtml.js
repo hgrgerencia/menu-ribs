@@ -50,11 +50,11 @@ let printHtml = (array=[])=>{
       }
       
       document.getElementById("card-products").innerHTML+=`
-      <div class="container">
+      <div class="container col-10 g-6">
         <div class="card mb-3">
           ${insertHtml}
           <div class="card-body" style="background-color: black;">
-            <h5 class="card-title text-white style-script-regular h1">${e.title}</h5>
+            <h5 class="card-title text-white style-script-regular h1 animate__bounceIn">${e.title}</h5>
       
               ${precio}
           </div>
@@ -64,3 +64,6 @@ let printHtml = (array=[])=>{
 
     })
   }
+
+
+  
