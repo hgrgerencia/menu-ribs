@@ -31,15 +31,15 @@ let printHtml = (array=[])=>{
       }
       let precio=''
       if (e.lista) {
-        precio =`
-         <div class="card-text text-white"> 
+        precio =` 
+         <div class="card-text text-white details" Style="display: none;"> 
           ${e.description}
          </div>
 
         `
       }else {
         precio = `
-            <p class="card-text text-white">
+            <p class="card-text text-white details " Style="display: none;">
               ${e.description}
             </p>
             <p class="card-text text-white" >
@@ -50,7 +50,7 @@ let printHtml = (array=[])=>{
       }
       
       document.getElementById("card-products").innerHTML+=`
-      <div class="container col-10 g-6">
+      <div class="container col-10 g-6" onclick="toggleDetails(this)">
         <div class="card mb-3">
           ${insertHtml}
           <div class="card-body" style="background-color: black;">
@@ -64,6 +64,15 @@ let printHtml = (array=[])=>{
 
     })
   }
+
+  function toggleDetails(element) {
+    const details = element.querySelector('.details');
+    if (details.style.display === "block") {
+        details.style.display = "none";
+    } else {
+        details.style.display = "block";
+    }
+}
 
 
   
