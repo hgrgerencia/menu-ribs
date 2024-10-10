@@ -33,3 +33,46 @@
   background-color: goldenrod; /* Color al pasar el mouse */
 }
 
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  
+}
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Los copos no interfieren con el clic */
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%;
+  color: white; /* Color de los copos */
+  font-size: 24px; /* Tamaño de los copos */
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(100vh); /* Hacia abajo */
+  }
+}
+
