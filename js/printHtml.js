@@ -21,7 +21,7 @@ let printHtml = (array=[])=>{
       `
 
     }
-    array = array.sort((a, b) => Number(b.price.substring(11, 14)) - Number(a.price.substring(11, 14)));
+    array = array.sort((a, b) => Number(b.price.substring(7, 10)) - Number(a.price.substring(7, 10)));
 
     array.forEach(e =>{
       let adicional = e.adicional === true ? adicionales : ''
