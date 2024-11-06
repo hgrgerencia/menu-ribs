@@ -42,10 +42,8 @@ let printHtml = (array=[])=>{
             <p class="card-text text-white details " Style="display: none;">
               ${e.description}
             </p>
-            <p class="card-text text-white" >
             <p class=" text-white h5">${e.price}</p>
-              ${ adicional}
-            </p>
+              ${ adicional}  
         `
       }
       
@@ -55,7 +53,6 @@ let printHtml = (array=[])=>{
           ${insertHtml}
           <div class="card-body" style="background-color: black;">
             <h5 class="card-title text-white style-script-regular h1 animate__bounceIn">${e.title}</h5>
-      
               ${precio}
           </div>
         </div>
