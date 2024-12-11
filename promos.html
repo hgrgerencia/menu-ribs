@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Ribs</title>
+    <link
+      href="./css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+    href="./css/style.css"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="./css/animate.min.css"
+    />
+  </head>
+  <body style="background-color: rgb(80, 78, 78);">
+    <nav class="navbar navbar-dark bg-black fixed-top" id="menu">
+    </nav>
+    <hr />
+    <hr />
+    <hr />
+    <div class="container" id="card-products">
+
+    </div>
+
+    <button class="floating-button " onclick="window.location.href='index.html'">
+      <img src="./logo.png" alt="" srcset="" class="card-img-top">
+    </button>
+
+
+
+    <p></p>
+    <p></p>
+
+    <script src="./js/printHtml.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+      let bebidas =[
+        {
+          img:"./img/promos/promo1diciembre.jpg",
+          title:"",
+          description:`
+
+          `,
+          price:"",
+        },
+        /**{
+          img:"./img/bebidas/jugos.png",
+          title:"Jugos",
+          description:`
+          <p class=" text-white h5">3.50 Jugo de Fresa</p>
+          <p class=" text-white h5">3.50 Jugo de Limon </p>
+          <p class=" text-white h5">3.50 Jugo de Parchita </p>
+          <p class=" text-white h5">3.50 Jugo de Piña </p>
+          `,
+          price:"Precio US$ 3.50",
+          lista:true
+        },**/
+
+
+
+      ]
+
+      printHtml(bebidas)
+    </script>
+    <script
+      src="./js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
