@@ -69,10 +69,40 @@ let menu = ()=>{
       </div>
 
 
-
+    <div id="publicidad-modal" class="modal"> 
+      <div class="modal-content"> 
+        <span class="close-button">&times;</span> 
+        <img src="img/promos/dinamica5.png" alt="Publicidad del Mes"> 
+      </div> 
+    </div>
 
     `
 
+    document.addEventListener('DOMContentLoaded', (event) => {
+      // Mostrar el modal al cargar la página
+      const modal = document.getElementById("publicidad-modal");
+      const span = document.getElementsByClassName("close-button")[0];
+  
+      function mostrarModal() {
+          modal.style.display = "block";
+      }
+  
+      // Cerrar el modal cuando se hace clic en la 'X'
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // Cerrar el modal cuando se hace clic fuera del contenido del modal
+      window.onclick = function(event) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      }
+  
+      // Mostrar el modal cada vez que se carga una nueva página
+      mostrarModal();
+  });
+  
 
 }
 
