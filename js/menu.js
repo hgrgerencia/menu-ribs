@@ -69,12 +69,7 @@ let menu = ()=>{
       </div>
 
 
-    <div id="publicidad-modal" class="modal"> 
-      <div class="modal-content"> 
-        <span class="close-button">&times;</span> 
-        <img src="img/promos/dinamica5.png" alt="Publicidad del Mes"> 
-      </div> 
-    </div>
+   
 
     `
 
