@@ -76,7 +76,7 @@ let menu = ()=>{
     document.addEventListener('DOMContentLoaded', (event) => {
       // Mostrar el modal al cargar la página
       const modal = document.getElementById("publicidad-modal");
-      const span = document.getElementsByClassName("close-button")[0];
+      const span = document.getElementsByClassName("close-button-publicidad")[0];
   
       function mostrarModal() {
           modal.style.display = "block";
