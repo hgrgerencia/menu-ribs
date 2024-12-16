@@ -77,7 +77,7 @@ body {
 }
 
 
-.modal {
+.modal-publicidad {
   display: none; 
   position: fixed; 
   z-index: 1; 
@@ -90,7 +90,7 @@ body {
   background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-content {
+.modal-content-publicidad {
   background-color: black;
   margin: 15% auto;
   padding: 20px;
@@ -99,15 +99,15 @@ body {
   max-width: 600px;
 }
 
-.close-button {
+.close-button-publicidad {
   color: #aaa;
-  float: right;
+  float: left;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close-button:hover,
-.close-button:focus {
+.close-button-publicidad:hover,
+.close-button-publicidad:focus {
   color: rgb(216, 210, 40);
   text-decoration: none;
   cursor: pointer;
