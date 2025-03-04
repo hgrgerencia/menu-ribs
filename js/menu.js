@@ -72,38 +72,38 @@ let menu = ()=>{
    
 
     `
-    // Obtener la fecha de hoy
-      let hoy = new Date();
-      // Obtener el día de la semana (0 es domingo, 1 es lunes, etc.)
-      let diaSemana = hoy.getDay();
-      // Verificar si es viernes, sábado o domingo
-      if (diaSemana === 1 || diaSemana === 2 || diaSemana === 3 || diaSemana === 4) {
-          console.log("Hoy es viernes");
-          document.addEventListener('DOMContentLoaded', (event) => {
-            // Mostrar el modal al cargar la página
-            const modal = document.getElementById("publicidad-modal");
-            const span = document.getElementsByClassName("close-button-publicidad")[0];
+    // // Obtener la fecha de hoy
+    //   let hoy = new Date();
+    //   // Obtener el día de la semana (0 es domingo, 1 es lunes, etc.)
+    //   let diaSemana = hoy.getDay();
+    //   // Verificar si es viernes, sábado o domingo
+    //   if (diaSemana === 1 || diaSemana === 2 || diaSemana === 3 || diaSemana === 4) {
+    //       console.log("Hoy es viernes");
+    //       document.addEventListener('DOMContentLoaded', (event) => {
+    //         // Mostrar el modal al cargar la página
+    //         const modal = document.getElementById("publicidad-modal");
+    //         const span = document.getElementsByClassName("close-button-publicidad")[0];
         
-            function mostrarModal() {
-                modal.style.display = "block";
-            }
+    //         function mostrarModal() {
+    //             modal.style.display = "block";
+    //         }
         
-            // Cerrar el modal cuando se hace clic en la 'X'
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
+    //         // Cerrar el modal cuando se hace clic en la 'X'
+    //         span.onclick = function() {
+    //             modal.style.display = "none";
+    //         }
         
-            // Cerrar el modal cuando se hace clic fuera del contenido del modal
-            window.onclick = function(event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            }
+    //         // Cerrar el modal cuando se hace clic fuera del contenido del modal
+    //         window.onclick = function(event) {
+    //             if (event.target === modal) {
+    //                 modal.style.display = "none";
+    //             }
+    //         }
         
-            // Mostrar el modal cada vez que se carga una nueva página
-            mostrarModal();
-          });
-      } 
+    //         // Mostrar el modal cada vez que se carga una nueva página
+    //         mostrarModal();
+    //       });
+    //   } 
 
     
 }
