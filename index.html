@@ -1,204 +1,113 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu Ribs</title>
-    <link
-      href="./css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link
-    href="./css/style.css"
-    rel="stylesheet"
-    />
-    <link
-    rel="stylesheet"
-    href="./css/animate.min.css"
-    />
+<!DOCTYPE html><html><head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ribs Burger">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Flet specific -->
+  <meta name="flet-route-url-strategy" content="path">
+  <meta name="flet-web-pyodide" content="true">
+
+  <title>Ribs Burger</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    var webRenderer = "canvaskit";
+    var useColorEmoji = "false" == "true";
+    var pythonModuleName = "main";
+  </script>
+
+  <script src="python.js"></script>
+  <style id="splash-screen-style">
+    html {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #ffffff;
+          background-size: 100% 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #222222;
+          }
+    }
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+  </script>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+
+<body>
+  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+  </picture>
+  <script src="flutter_bootstrap.js" async=""></script>
 
 
-  </head>
-  <body style="background-color: rgb(80, 78, 78);"> 
-    <nav class="navbar navbar-dark bg-black fixed-top" id="menu">
-
-    </nav>
-
-    <div id="publicidad-modal" class="modal-publicidad"> 
-      <div class="modal-content-publicidad"> 
-        <div>
-
-          <span class="close-button-publicidad">&times;</span> 
-        </div>
-        <img src="img/promos/dinamica10.png" class="card-img-top" alt="Publicidad del Mes"> 
-      </div> 
-    </div>
-    <hr>
-    <hr>
-    <hr>
-
-    <div class="container ">
-      <div class="row row-cols-2 justify-content-center g-2  ">
-
-          <div class="col" >
-            <div class="card boingInUp" >
-              <a class="nav-link active " aria-current="page" href="./entradas.html">
-                <img src="./img/entradas/4x4_tex_mex.jpg" class="card-img-top  "  alt="...">
-              </a>
-              <div class="card-body text-center" style="background-color: black;">
-                <h5 class="card-title h1 text-white style-script-regular"><a class="nav-link active animate__bounceIn" aria-current="page" href="./entradas.html">Entradas</a></h5>
-                <p class="card-text"></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <a class="nav-link active" aria-current="page" href="./burger.html">
-                <img src="./img/burger/burger_pollo_cesar.jpg" class="card-img-top" alt="...">
-              </a>
-              <div class="card-body text-center .oleo-script-regular" style="background-color: black;">
-                <h5 class="card-title h1 text-white style-script-regular"><a class="nav-link active animate__bounceIn" aria-current="page" href="./burger.html">Burger</a></h5>
-                <p class="card-text"></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <a class="nav-link active" aria-current="page" href="./platos.html">
-                <img src="./img/platos/espetas.jpg" class="card-img-top" alt="...">
-              </a>
-              <div class="card-body text-center" style="background-color: black ;" >
-                <h5 class="card-title h1  style-script-regular text-white"  ><a class="nav-link active animate__bounceIn" aria-current="page" href="./platos.html">Platos</a></h5>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <a class="nav-link active" aria-current="page" href="./bebidas.html">
-                <img src="./img/bebidas/jugos.png" class="card-img-top" alt="...">
-              </a>
-              <div class="card-body text-center " style="background-color: black ;">
-                <h5 class="card-title h1 text-white style-script-regular"><a class="nav-link active animate__bounceIn" aria-current="page" href="./bebidas.html">Bebidas</a></h5>
-                <p class="card-text"></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./cocteles.html">
-                  <img src="./img/cocteles/Cocteles.png" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body  text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white"><a class="nav-link active animate__bounceIn" aria-current="page" href="./cocteles.html">Cocteles</a></h5>
-                  <p class="card-text"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./postres.html">
-                  <img src="./img/postres/pie.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white" style="color: yellow ;"><a class="nav-link active animate__bounceIn" aria-current="page" href="./postres.html">Postres</a></h5>
-                  <p class="card-text"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./extras.html">
-                  <img src="./img/extras/tomates_hilmary.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white"><a class="nav-link active animate__bounceIn" aria-current="page" href="./extras.html">Extras</a></h5>
-                  <p class="card-text"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./licores.html">
-                  <img src="./img/licores/trago_whisky.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white"><a class="nav-link active animate__bounceIn" aria-current="page" href="./licores.html">Licores</a></h5>
-                  <p class="card-text"></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./cafes.html">
-                  <img src="./img/cafes/capuccino.jpeg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white"><a class="nav-link active animate__bounceIn" aria-current="page" href="./cafes.html">Cafés</a></h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="col" id="promos">
-              <div class="card">
-                <a class="nav-link active" aria-current="page" href="./promos.html">
-                  <img src="./img/promos/promos.jpg" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body text-center" style="background-color: black;">
-                  <h5 class="card-title h1 style-script-regular text-white"><a class="nav-link active animate__bounceIn" aria-current="page" href="./promos.html">Promociones</a></h5>
-                </div>
-              </div>
-            </div>
-            
-            
-      </div>
-    </div>
-    <p></p>
-    <p></p>
-    <p></p>
-    <footer>
-      <p>&copy; 2024 Ribs Burger de Venezuela. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="./js/menu.js"></script>
-    <script>
-      // si es viernes a sabado no aparece promos
-      //var today = new Date();
-      //var dayName = today.getDay();
-      //if (dayName === 5|| dayName === 6|| dayName === 7) {
-        //document.getElementById("promos").style.display = "none";
-      //}
-
-
-    </script>
-
-    <script
-      src="./js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="./js/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="./js/bootstrap.min.js"
-      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-      crossorigin="anonymous"
-    ></script>
-
-
-  </body>
-</html>
+</body></html>
